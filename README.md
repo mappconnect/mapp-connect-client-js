@@ -13,7 +13,7 @@ var mcc = new lib.MappConnectClient('https://charon-test.shortest-route.com', 'f
 
 
 
-Get list of prepared messages
+## Get list of prepared messages
 
 let getMessagesCallback = function (data) {
     console.log(data);
@@ -22,7 +22,7 @@ mcc.getMessages(getMessagesCallback);
 
 
 
-Get list of groups
+## Get list of groups
 
 let getGroupsCallback = function (data) {
     console.log(data);
@@ -31,9 +31,17 @@ mcc.getGroups(getGroupsCallback);
 
 
 
-Send contact profile to be processed by Mapp Connect and saved by Engage
+## Send contact profile to be processed by Mapp Connect and saved by Engage
 
 mcc.sendUser("{\"email\":\"test@xx.xx\"}");
 
 
 Each operation can be triggered by sendXxxx method on the client, for now each of them expects the full JSON payload to be provided as an argument.
+*Email
+*Sms
+*Push
+*Transaction
+*Automation
+
+Check list of API's in right menu to check required fields for every event. 
+
